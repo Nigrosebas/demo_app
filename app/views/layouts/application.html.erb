@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DemoApp</title>
+  <title>ROR Demo App | <%=h yield(:title) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+   	<%= stylesheet_link_tag    "bootstrap" %>
+	<%= stylesheet_link_tag    "bootstrap.min" %>
+	<%= stylesheet_link_tag    "bootstrap-responsive" %>
+	<%= stylesheet_link_tag    "bootstrap-responsive.min" %>
+  	<%= javascript_include_tag "application" %>
+  	<%= javascript_include_tag "application" %>
+  	<%= javascript_include_tag "bootstrap" %>
+  	<%= javascript_include_tag "bootstrap.min" %>
+  	<%= csrf_meta_tags %>
+  	    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 </head>
 <body>
 
-<%= yield %>
+
+
+
+        <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Sidebar</li>
+              <li class="active"><a href="home">Home</a></li>
+              <li><a href="about">About</a></li>
+              <li><a href="help">Help</a></li>
+
+
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="hero-unit">
+			<%= yield %>
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+      	<center><p>&copy; Company 2013</p></center>
+      </footer>
+
+    </div><!--/.fluid-container-->
 
 </body>
 </html>
